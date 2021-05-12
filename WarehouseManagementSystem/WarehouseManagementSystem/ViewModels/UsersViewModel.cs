@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Data.Entity.Validation;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Windows;
@@ -133,12 +134,29 @@ namespace WarehouseManagementSystem.Views
             {
                 //Add new user
                 WarehouseDbContext ctx = new WarehouseDbContext();
-                ctx.Users.Add(SelectedUser);
-                ctx.SaveChanges();
 
-                //Reload data from databse
+                ctx.Users.Add(SelectedUser);
+
+
+                try
+                {
+                    ctx.SaveChanges();
+                }
+                catch (DbEntityValidationException ex)
+                {
+                    foreach (var entityValidationErrors in ex.EntityValidationErrors)
+                    {
+                        foreach (var validationError in entityValidationErrors.ValidationErrors)
+                        {
+                            string property = ("Property:" + validationError.PropertyName + "Error:" + validationError.ErrorMessage);
+                        }
+                    }
+                }
+
                 UserList = new List<User>(ctx.Users.ToList());
-                IsNew = false;
+
+                IsNew = false;     
+             
             }
 
         }

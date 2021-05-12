@@ -29,17 +29,5 @@ namespace WarehouseManagementSystem.Views
         }
     }
 
-    /// <summary>
-    /// Логика взаимодействия для HomeWindow.xaml
-    /// </summary>
-    public partial class CopyOfHomeWindow : Window
-    {
-        public CopyOfHomeWindow()
-        {
-            InitializeComponent();
 
-            //Binding view with ViewModel
-            DataContext = new HomeViewModel();
-        }
-    }
 }

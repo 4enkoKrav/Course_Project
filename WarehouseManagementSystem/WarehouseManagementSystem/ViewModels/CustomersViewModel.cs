@@ -113,8 +113,21 @@ namespace WarehouseManagementSystem.ViewModels
             
         }
 
-        
-        
+        private void Add()
+        {
+            SelectedCustomer = new Customer();
+            IsNew = true;
+        }
+
+        private void Cancel()
+        {
+            this.CurrentWindows.Close();
+        }
+
+
+
+
+
         private void Save()
         {
             
@@ -171,16 +184,7 @@ namespace WarehouseManagementSystem.ViewModels
             
         }
        
-        private void Add()
-        {
-            SelectedCustomer = new Customer();
-            IsNew = true;
-        }
-
-        private void Cancel()
-        {
-            this.CurrentWindows.Close();
-        }
+ 
     
              
     }
