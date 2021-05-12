@@ -1,0 +1,200 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="WarehouseManagementSystem.App">
+    <Position X="27.5" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>App.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WarehouseManagementSystem.Helpers.PasswordBoxAssistant">
+    <Position X="26" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EBABAAAAAAAAAAEAAAAAAACoABAgAAAAAAAAAICAAAg=</HashCode>
+      <FileName>Helpers\PasswordBoxAssistant.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WarehouseManagementSystem.Helpers.RelayCommand" BaseTypeListCollapsed="true">
+    <Position X="27.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAEACAAQAAECAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Helpers\RelayCommand.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="WarehouseManagementSystem.Models.Category">
+    <Position X="19.75" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAgAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Category.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WarehouseManagementSystem.Models.Customer">
+    <Position X="18" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAQAAAACAAgAAIAAAAAAQAAAAAAAACAIAAAAAAAAA=</HashCode>
+      <FileName>Models\Customer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WarehouseManagementSystem.Models.Order">
+    <Position X="21.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEBAAAAAAAAgAAAAgAAAAgAAAAAABABAAAAAAAAAAQ=</HashCode>
+      <FileName>Models\Order.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WarehouseManagementSystem.Models.OrderDetail">
+    <Position X="21.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAACAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAgAAAAAA=</HashCode>
+      <FileName>Models\OrderDetail.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WarehouseManagementSystem.Models.Product">
+    <Position X="19.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAQAgggAAAAAAAAQAAAAAABAAAAAAAAAACAA=</HashCode>
+      <FileName>Models\Product.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WarehouseManagementSystem.Models.User">
+    <Position X="18" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACgAgAAIAAAAAAQAAAAAAAACAAAAAAAAAAA=</HashCode>
+      <FileName>Models\User.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WarehouseManagementSystem.Models.WarehouseDbContext">
+    <Position X="29.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAACAAAAABAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAQ=</HashCode>
+      <FileName>Models\WarehouseDbContext.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WarehouseManagementSystem.Properties.Resources">
+    <Position X="25.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAABEAAAAQAAAAAAAAAAAAAAAIA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WarehouseManagementSystem.Properties.Settings">
+    <Position X="27.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAAAABAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WarehouseManagementSystem.ViewModels.AddProductsViewModel">
+    <Position X="0.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QANAAAAAQAAFACECAAAAAAAAAAEAAACAAIAAAgAACAQ=</HashCode>
+      <FileName>ViewModels\AddProductsViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WarehouseManagementSystem.ViewModels.BaseViewModel" Collapsed="true">
+    <Position X="7.25" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAIAAAAAAAgAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ViewModels\BaseViewModels.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="WarehouseManagementSystem.ViewModels.CustomersViewModel">
+    <Position X="7.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAIAAMAAQAAEgAECAAAQAAAAAAEAAAAIAEAEAAAkAAg=</HashCode>
+      <FileName>ViewModels\CustomersViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WarehouseManagementSystem.ViewModels.HomeViewModel">
+    <Position X="9.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAQAAAAAAAQAQAAAABAAQAAAAAAAAAAIAAAACAEQAA=</HashCode>
+      <FileName>ViewModels\HomeViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WarehouseManagementSystem.ViewModels.LoginViewModel">
+    <Position X="11.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAIAEAAAAAAAAAAAAAAAAAAAAAAAQAACAAAA=</HashCode>
+      <FileName>ViewModels\LoginViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WarehouseManagementSystem.ViewModels.ProductsViewModel">
+    <Position X="14" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>SAIAAIABQAAEyAECACAAAAAAAAEAEAAIAEQAAAAmAAA=</HashCode>
+      <FileName>ViewModels\ProductsViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WarehouseManagementSystem.Views.OrdersViewModel">
+    <Position X="2.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAFAAEAgQAAEAAEAIABAQAAAAAEAAEAIAEAAABgAEAg=</HashCode>
+      <FileName>ViewModels\OrdersViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WarehouseManagementSystem.Views.UsersViewModel">
+    <Position X="5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAKAAIAAQAAEgAECAAAAAAAIAAEAAAAIAMAAAAQkAAA=</HashCode>
+      <FileName>ViewModels\UsersViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WarehouseManagementSystem.Views.AddProductsWindow" BaseTypeListCollapsed="true">
+    <Position X="34.75" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Views\AddProductsWindow.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="WarehouseManagementSystem.Views.CustomersWindow" BaseTypeListCollapsed="true">
+    <Position X="33.75" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Views\CustomersWindow.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Orientation="Left" Position="0.491" Collapsed="true" />
+  </Class>
+  <Class Name="WarehouseManagementSystem.Views.HomeWindow" BaseTypeListCollapsed="true">
+    <Position X="33.5" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Views\HomeWindow.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="WarehouseManagementSystem.Views.LoginWindow" BaseTypeListCollapsed="true">
+    <Position X="35.25" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Views\LoginWindow.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="WarehouseManagementSystem.Views.OrdersWindow" BaseTypeListCollapsed="true">
+    <Position X="33.75" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Views\OrdersWindow.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="WarehouseManagementSystem.Views.ProductsWindow" BaseTypeListCollapsed="true">
+    <Position X="35.5" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Views\ProductsWindow.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="WarehouseManagementSystem.Views.UsersWindow" BaseTypeListCollapsed="true">
+    <Position X="35.5" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Views\UsersWindow.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

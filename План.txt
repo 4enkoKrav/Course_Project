@@ -1,0 +1,22 @@
+Warehouse Management System 
+(Система управления складом, в основном товары домашнего декора)
+
+1. Cоздание базы данных (6 таблиц)
+
+2. Дизайн главного окна(HomeWindow)
+3. Дизайн окна клиентов(CustomersWindow)
+4. Дизайн окна товаров(ProductsWindow)
+5. Дизайн окна оформления товаров(OrdersWindow)
+6. Дизайн окна пользователей(UsersWindow)
+
+7. ViewModel и Model главного окна(создание кода) (HomeViewModel)
+8. ViewModel и Model окна клиентов(создание кода) (CustomersViewModel)
+9. ViewModel и Model окна товаров(создание кода) (ProductsViewModel) 
+10. ViewModel и Model окна оформления товаров(создание кода) (OrdersViewModel)
+11. ViewModel и Model окна клиентов(создание кода) (UsersViewModel)
+
+
+11. Дизайн окна входа в систему(LoginWindow) +
+
+12. ViewModel окна входа в систему(LoginWindowViewModel)  +- 
+
