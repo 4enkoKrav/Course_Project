@@ -102,7 +102,24 @@ namespace WarehouseManagementSystem.Views
                     MessageBox.Show(CurrentWindows, ex.Message, "Database error", MessageBoxButton.OK, MessageBoxImage.Error);
                 }
             }
+
         }
+
+
+        public void Add()
+        {
+            SelectedUser = new User();
+            IsNew = true;
+        }
+
+        private void Cancel()
+        {
+            this.CurrentWindows.Close();
+        }
+
+
+
+
 
         public void Save()
         {
@@ -162,16 +179,7 @@ namespace WarehouseManagementSystem.Views
         }
 
 
-        public void Add()
-        {
-            SelectedUser = new User();
-            IsNew = true;
-        }
 
-        private void Cancel()
-        {
-            this.CurrentWindows.Close();
-        }
     }
 
 }

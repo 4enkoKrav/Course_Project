@@ -4,7 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d"
-        Title="WMS" Height="562" Width="879" WindowStartupLocation="CenterScreen" ResizeMode="CanMinimize">
+        Title="WMS" Height="700" Width="1000" WindowStartupLocation="CenterScreen" ResizeMode="CanMinimize">
     <Window.Resources>
         <ControlTemplate TargetType="Button" x:Key="RoundedButtonControlTemplate">
             <Border  Background="{TemplateBinding Background}"  x:Name="Border" BorderBrush="#6accbd"  BorderThickness="{TemplateBinding BorderThickness}" CornerRadius="9" >

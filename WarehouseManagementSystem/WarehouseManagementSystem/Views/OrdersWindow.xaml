@@ -4,7 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
       mc:Ignorable="d"
-      Title="Orders" Height="421" Width="739.5" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" ShowInTaskbar="False">
+      Title="Orders" Height="700" Width="1000" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" ShowInTaskbar="False">
 
     <Window.Resources>
         <ControlTemplate x:Key="RoundedComboBoxControlTemplate" TargetType="{x:Type ComboBox }"  >

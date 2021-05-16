@@ -4,7 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d"
-        Title="Customers" Height="509" Width="917" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" ShowInTaskbar="False">
+        Title="Customers" Height="700" Width="1200" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" ShowInTaskbar="False">
     <Window.Resources>
         <ControlTemplate TargetType="Button" x:Key="RoundedButtonControlTemplate">
             <Border  Background="{TemplateBinding Background}"  x:Name="Border"  BorderThickness="{TemplateBinding BorderThickness}" CornerRadius="6" >
@@ -46,16 +46,16 @@
                     <RowDefinition Height="185*"/>
                     <RowDefinition Height="378*"/>
                 </Grid.RowDefinitions>
-                <ListView x:Name="listView" ItemsSource="{Binding CustomerList}" Margin="0,45,0,0" Grid.RowSpan="4" Grid.ColumnSpan="2" SelectedItem="{Binding SelectedCustomer}">
+                <ListView x:Name="listView" ItemsSource="{Binding CustomerList}" Margin="1,47,-0.6,-1.6" Grid.RowSpan="4" Grid.ColumnSpan="2" SelectedItem="{Binding SelectedCustomer}">
                     <ListView.View>
                         <GridView>
-                            <GridViewColumn Header="ID" DisplayMemberBinding="{Binding ID}" Width="30"/>
-                            <GridViewColumn Header="Name" DisplayMemberBinding="{Binding Name}" Width="80"/>
-                            <GridViewColumn Header="Company" DisplayMemberBinding="{Binding CompanyName}" Width="80"/>
-                            <GridViewColumn Header="Address" DisplayMemberBinding="{Binding Address}" Width="100"/>
-                            <GridViewColumn Header="City" DisplayMemberBinding="{Binding City}" Width="80" />
-                            <GridViewColumn Header="Telephone" DisplayMemberBinding="{Binding Telephone}" Width="70"/>
-                            <GridViewColumn Header="E-mail" DisplayMemberBinding="{Binding Email}" Width="70"/>
+                            <GridViewColumn Header="ID" DisplayMemberBinding="{Binding ID}" Width="80"/>
+                            <GridViewColumn Header="Name" DisplayMemberBinding="{Binding Name}" Width="120"/>
+                            <GridViewColumn Header="Company" DisplayMemberBinding="{Binding CompanyName}" Width="120"/>
+                            <GridViewColumn Header="Address" DisplayMemberBinding="{Binding Address}" Width="120"/>
+                            <GridViewColumn Header="City" DisplayMemberBinding="{Binding City}" Width="120" />
+                            <GridViewColumn Header="Telephone" DisplayMemberBinding="{Binding Telephone}" Width="150"/>
+                            <GridViewColumn Header="E-mail" DisplayMemberBinding="{Binding Email}" Width="150"/>
                         </GridView>
                     </ListView.View>
                 </ListView>

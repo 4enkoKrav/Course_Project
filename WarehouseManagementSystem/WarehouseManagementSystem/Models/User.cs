@@ -31,5 +31,19 @@ namespace WarehouseManagementSystem.Models
         public string Password { get; set; }
 
         public DateTime? LastLoginDate { get; set; }
+
+
+        public User() { }
+
+        public User(string Email, string Password)
+        {
+            this.Email = Email;
+            this.Password = Password;
+        }
+
+
+
+
+
     }
 }

@@ -5,6 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:ff="clr-namespace:WarehouseManagementSystem.Helpers"
         mc:Ignorable="d"
+         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         Title="Login" Height="324" Width="497" ResizeMode="NoResize" WindowStartupLocation="CenterScreen"  >
     <Window.Resources>
         <ControlTemplate TargetType="Button" x:Key="RoundedButtonControlTemplate">
@@ -24,11 +25,26 @@
             </Grid.ColumnDefinitions>
             <Label HorizontalContentAlignment="Center" Content="Inventory  Management  System" Foreground="White"  FontSize="25" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="481" Height="56" RenderTransformOrigin="0.517,0.278" Grid.ColumnSpan="3" />
             <Label Content="E-mail:" HorizontalAlignment="Left" Foreground="White" FontSize="15" Margin="43,71,0,0" VerticalAlignment="Top" Width="99" Grid.Column="1"/>
-            <Label Content="Password:" HorizontalAlignment="Left" Foreground="White" FontSize="15" Margin="43,150,0,0" VerticalAlignment="Top" Width="99" Grid.Column="1"/>
+            <Label Content="Password:" HorizontalAlignment="Left" Foreground="White" FontSize="15" Margin="43.2,137,0,0" VerticalAlignment="Top" Width="99" Grid.Column="1"/>
 
-            <TextBox Text="{Binding CurrentUser.Email}" TabIndex="1" Background="#8a8e8e" Foreground="White" BorderThickness="2.5"  Height="30" Margin="43,101,60,0" TextWrapping="Wrap" VerticalAlignment="Top" Grid.ColumnSpan="2" Grid.Column="1"/>
-            <PasswordBox Background="#8a8e8e" TabIndex="2" Foreground="White" x:Name="PasswordBox" ff:PasswordBoxAssistant.BindPassword="true" BorderThickness="2.5" ff:PasswordBoxAssistant.BoundPassword="{Binding Path=CurrentUser.Password, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Margin="43,180,60,75" Grid.ColumnSpan="2" Grid.Column="1"/>
-            <Button Command="{Binding LoginCommand}" IsDefault="True" Template="{StaticResource RoundedButtonControlTemplate}" Content="Login"   FontSize="14" Foreground="#323636"   HorizontalAlignment="Left"  Background="#6accbd" Margin="34,240,0,0" VerticalAlignment="Top" Width="368" Height="31" Grid.ColumnSpan="2" Grid.Column="1" />
+
+            <TextBox Text="{Binding CurrentUser.Email}" materialDesign:HintAssist.Hint="Enter password" TabIndex="1" Background="#8a8e8e" Foreground="White" BorderThickness="2.5"  Height="30" Margin="43,101,60,0" TextWrapping="Wrap" VerticalAlignment="Top" Grid.ColumnSpan="2" Grid.Column="1"/>
+            <PasswordBox Background="#8a8e8e" TabIndex="2" Foreground="White" x:Name="PasswordBox" materialDesign:HintAssist.Hint="Enter password"  ff:PasswordBoxAssistant.BindPassword="true" BorderThickness="2.5" ff:PasswordBoxAssistant.BoundPassword="{Binding Path=CurrentUser.Password, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Margin="43,180,60,75" Grid.ColumnSpan="2" Grid.Column="1"/>
+            <Button Command="{Binding LoginCommand}"   IsDefault="True" Template="{StaticResource RoundedButtonControlTemplate}" Content="Login"   FontSize="14" Foreground="#323636"   HorizontalAlignment="Left"  Background="#6accbd" Margin="34,240,0,0" VerticalAlignment="Top" Width="368" Height="31" Grid.ColumnSpan="2" Grid.Column="1" />
+            <!-- Style="{StaticResource MaterialDesignFlatButton}"-->
+            <!-- Click="Button_Reg_Click"
+            <Button  Command="{Binding LoginCommand}"  Style="{StaticResource MaterialDesignFlatButton}" IsDefault="True"  Content="Register" FontSize="14" Foreground="#323636"   HorizontalAlignment="Left"  Background="#6accbd" Margin="34,240,0,0" VerticalAlignment="Top" Width="368" Height="31" Grid.ColumnSpan="2" Grid.Column="1"  />
+            <TextBox x:Name="textBoxEmail" materialDesign:HintAssist.Hint="Enter login"  TabIndex="1" Background="#8a8e8e" Foreground="White" BorderThickness="2.5"  Height="30" Margin="43,101,60,0" TextWrapping="Wrap" VerticalAlignment="Top" Grid.ColumnSpan="2" Grid.Column="1"/>
+            <PasswordBox x:Name="passBox" materialDesign:HintAssist.Hint="Enter password"  TabIndex="1" Background="#8a8e8e" Foreground="White" BorderThickness="2.5"  Height="30" Margin="43.2,165,60.4,0" VerticalAlignment="Top" Grid.ColumnSpan="2" Grid.Column="1"/>
+          
+            <PasswordBox x:Name="passBox_2" materialDesign:HintAssist.Hint="Enter password"  TabIndex="1" Background="#8a8e8e" Foreground="White" BorderThickness="2.5"  Height="30" Margin="43.2,201,60.4,0" VerticalAlignment="Top" Grid.ColumnSpan="2" Grid.Column="1"/>
+            -->   
         </Grid>
+            <!-- 
+            
+    
+              -->
+
+
     </Border>
 </Window>

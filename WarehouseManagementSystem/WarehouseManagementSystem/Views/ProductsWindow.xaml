@@ -4,7 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d"
-        Title="Products" Height="548" Width="893" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" ShowInTaskbar="False">
+        Title="Products" Height="700" Width="1000" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" ShowInTaskbar="False">
     <Window.Resources>
         <ControlTemplate TargetType="Button" x:Key="RoundedButtonControlTemplate">
             <Border  Background="{TemplateBinding Background}"  x:Name="Border"  BorderThickness="{TemplateBinding BorderThickness}" CornerRadius="6" >
@@ -31,10 +31,18 @@
                 <Label Content="Category:" Foreground="White" FontSize="15"  HorizontalAlignment="Left" Margin="9,165,0,0" VerticalAlignment="Top" Width="91" Height="30"/>
                 <Label Content="Image:" Foreground="White" FontSize="15"  HorizontalAlignment="Left" Margin="9,200,0,0" VerticalAlignment="Top" Width="91" Height="30"/>
 
-                <Border BorderBrush="White" BorderThickness="1" Margin="105,202,13,189">
-                    <Image Source="{Binding SelectedProduct.Image}"   Margin="9,9,9,35"/>
+                <Border BorderBrush="White" BorderThickness="1" Margin="108,202,10,312.4" RenderTransformOrigin="0.5,0.5">
+                    <Border.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform AngleX="-0.316"/>
+                            <RotateTransform/>
+                            <TranslateTransform X="-0.394"/>
+                        </TransformGroup>
+                    </Border.RenderTransform>
+                    <Image Source="{Binding SelectedProduct.Image}"   Margin="9.2,9.2,8.6,42.2"/>
                 </Border>
-                <Button Command="{Binding AddImageCommand}" Template="{StaticResource RoundedButtonControlTemplate}"   FontSize="15"  Content="Add Image"  Background="#e5e9e9"  x:Name="btnSave_Copy" HorizontalAlignment="Left" Margin="115,294,0,0" VerticalAlignment="Top" Width="148" Height="23"/>
+                <Button Command="{Binding AddImageCommand}" Template="{StaticResource RoundedButtonControlTemplate}"   FontSize="15"  Content="Add Image"  Background="#e5e9e9"  x:Name="btnSave_Copy" HorizontalAlignment="Left" Margin="115,322,0,0" VerticalAlignment="Top" Width="148" Height="23"/>
 
             </Grid>
 
