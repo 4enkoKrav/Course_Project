@@ -27,7 +27,7 @@
                 <ComboBox ItemsSource="{Binding Customers}" DisplayMemberPath="Name"   SelectedItem="{Binding SelectedCustomer}" HorizontalAlignment="Left" Margin="105,142,0,0" VerticalAlignment="Top" Width="195" Height="27" IsReadOnly="True" />
                 <DatePicker  SelectedDate="{Binding SelectedOrder.Date}" HorizontalAlignment="Left" Margin="105,69,0,0" VerticalAlignment="Top" Width="203" Height="30"/>
                 <Button Command="{Binding DeleteCommand}" Template="{StaticResource RoundedButtonControlTemplate}" Foreground="Red" FontSize="15"  Content="Delete"   Background="#6accbd" HorizontalAlignment="Left" Margin="27,303,0,0" VerticalAlignment="Top" Width="260" Height="30"/>
-                <Button Command="{Binding AddProductCommand}" Template="{StaticResource RoundedButtonControlTemplate}" FontSize="15"  Content="Edit Products"  Background="#6accbd"  x:Name="btnSave" HorizontalAlignment="Left" Margin="27,266,0,0" VerticalAlignment="Top" Width="260" Height="32"/>
+                <Button Command="{Binding AddProductCommand}" Template="{StaticResource RoundedButtonControlTemplate}" FontSize="15"  Content="Add Product"  Background="#6accbd"  x:Name="btnSave" HorizontalAlignment="Left" Margin="27,266,0,0" VerticalAlignment="Top" Width="260" Height="32"/>
                 <Button Command="{Binding CancelCommand}" Template="{StaticResource RoundedButtonControlTemplate}" FontSize="15" Content="Cancel"  Background="#6accbd"  HorizontalAlignment="Left" Margin="27,338,0,0" VerticalAlignment="Top" Width="260" Height="30"/>
                 <ComboBox Text="{Binding SelectedOrder.OrderType}" HorizontalAlignment="Left" Margin="105,104,0,0" VerticalAlignment="Top" Width="195" Height="27" IsReadOnly="True" >
                     <ComboBoxItem Content="Out" />
@@ -41,7 +41,7 @@
                 <ListView x:Name="listView"  ItemsSource="{Binding OrderList}" Margin="0,42,0,0" HorizontalAlignment="Left" Width="408" SelectedItem="{Binding SelectedOrder}">
                     <ListView.View>
                         <GridView>
-                            <GridViewColumn Header="ID" DisplayMemberBinding="{Binding ID}" Width="40"/>
+                            <GridViewColumn Header="ID" DisplayMemberBinding="{Binding ID}" Width="90"/>
                             <GridViewColumn Header="Date" DisplayMemberBinding="{Binding Date}" Width="150"/>
                             <GridViewColumn Header="Customer" DisplayMemberBinding="{Binding Customer.Name}" Width="220"/>
                         </GridView>

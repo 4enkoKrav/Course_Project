@@ -12,24 +12,21 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using WarehouseManagementSystem.Models;
+using WarehouseManagementSystem.ViewModels;
 
 namespace WarehouseManagementSystem.Views
 {
     /// <summary>
-    /// Логика взаимодействия для AddProductsWindow.xaml
+    /// Interaction logic for AddProductsWindows.xaml
     /// </summary>
     public partial class AddProductsWindow : Window
     {
-        private Order order;
-
-        public AddProductsWindow()
-        {
-            InitializeComponent();
-        }
-
         public AddProductsWindow(Order order)
         {
-            this.order = order;
+            InitializeComponent();
+
+            //Binding view with ViewModel
+            DataContext = new AddProductsViewModel(this, order);
         }
     }
 }

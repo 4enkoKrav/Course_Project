@@ -21,7 +21,9 @@
                 <Button Template="{StaticResource RoundedButtonControlTemplate}"  Command="{Binding CustomersCommand}" Content="Customers" FontSize="15" HorizontalAlignment="Left" Margin="36,195,0,0" VerticalAlignment="Top" Width="310" Height="40"/>
                 <Button Template="{StaticResource RoundedButtonControlTemplate}"  Command="{Binding ProductsCommand}" Content="Products" FontSize="15" Margin="38,243,42,0" VerticalAlignment="Top" Height="41"/>
                 <Button Template="{StaticResource RoundedButtonControlTemplate}"  Command="{Binding OrdersCommand}" Content="Orders" FontSize="15" Margin="38,294,42,0" VerticalAlignment="Top" Height="41"/>
+               <!--
                 <Button Template="{StaticResource RoundedButtonControlTemplate}"  Command="{Binding UsersCommand}" Content="Users"  FontSize="15" HorizontalAlignment="Left" Margin="38,346,0,0" VerticalAlignment="Top" Width="308" Height="42"/>
+                -->
                 <Button  Command="{Binding ExitCommand}" Template="{StaticResource RoundedButtonControlTemplate}" Content="Exit"  FontSize="15" Background="#6accbd"  HorizontalAlignment="Left" Margin="38,450,0,19" Width="308" RenderTransformOrigin="0.516,0.128"/>
             </Grid>
 

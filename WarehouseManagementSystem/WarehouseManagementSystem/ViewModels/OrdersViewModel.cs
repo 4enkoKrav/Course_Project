@@ -125,11 +125,16 @@ namespace WarehouseManagementSystem.Views
             }
 
             AddProductsWindow myWindow = new AddProductsWindow(order);
+
+            myWindow.Show();
+
+            /*
             if (myWindow.ShowDialog() == true)
             {
                 WarehouseDbContext ctx = new WarehouseDbContext();
                 OrderList = new List<Order>(ctx.Orders.ToList());
-            }
+            }         
+            */
 
         }
        

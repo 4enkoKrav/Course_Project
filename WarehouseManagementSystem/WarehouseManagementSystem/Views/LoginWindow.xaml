@@ -28,7 +28,7 @@
             <Label Content="Password:" HorizontalAlignment="Left" Foreground="White" FontSize="15" Margin="43.2,137,0,0" VerticalAlignment="Top" Width="99" Grid.Column="1"/>
 
 
-            <TextBox Text="{Binding CurrentUser.Email}" materialDesign:HintAssist.Hint="Enter password" TabIndex="1" Background="#8a8e8e" Foreground="White" BorderThickness="2.5"  Height="30" Margin="43,101,60,0" TextWrapping="Wrap" VerticalAlignment="Top" Grid.ColumnSpan="2" Grid.Column="1"/>
+            <TextBox Text="{Binding CurrentUser.Email}" materialDesign:HintAssist.Hint="Enter email" TabIndex="1" Background="#8a8e8e" Foreground="White" BorderThickness="2.5"  Height="30" Margin="43,101,60,0" TextWrapping="Wrap" VerticalAlignment="Top" Grid.ColumnSpan="2" Grid.Column="1"/>
             <PasswordBox Background="#8a8e8e" TabIndex="2" Foreground="White" x:Name="PasswordBox" materialDesign:HintAssist.Hint="Enter password"  ff:PasswordBoxAssistant.BindPassword="true" BorderThickness="2.5" ff:PasswordBoxAssistant.BoundPassword="{Binding Path=CurrentUser.Password, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Margin="43,180,60,75" Grid.ColumnSpan="2" Grid.Column="1"/>
             <Button Command="{Binding LoginCommand}"   IsDefault="True" Template="{StaticResource RoundedButtonControlTemplate}" Content="Login"   FontSize="14" Foreground="#323636"   HorizontalAlignment="Left"  Background="#6accbd" Margin="34,240,0,0" VerticalAlignment="Top" Width="368" Height="31" Grid.ColumnSpan="2" Grid.Column="1" />
             <!-- Style="{StaticResource MaterialDesignFlatButton}"-->

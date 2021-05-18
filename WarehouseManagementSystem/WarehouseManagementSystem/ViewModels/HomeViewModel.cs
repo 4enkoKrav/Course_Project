@@ -24,7 +24,7 @@ namespace WarehouseManagementSystem.ViewModels
             this.CustomersCommand = new RelayCommand(param => this.CustomersManagement(), param => true);
             this.ProductsCommand = new RelayCommand(param => this.ProductsManagement(), param => true);
             this.OrdersCommand = new RelayCommand(param => this.OrdersManagement(), param => true);
-            this.UsersCommand = new RelayCommand(param => this.UsersManagement(), param => true);
+           // this.UsersCommand = new RelayCommand(param => this.UsersManagement(), param => true);
             this.ExitCommand = new RelayCommand(param => this.Exit(), param => true);
         }
 
@@ -61,11 +61,13 @@ namespace WarehouseManagementSystem.ViewModels
             myWindow.Show();
         }
 
+        
         private void UsersManagement()
         {
             UsersWindow myWindow = new UsersWindow();
             myWindow.Show();
         }
+        
     }
 
 }
