@@ -96,27 +96,14 @@ namespace WarehouseManagementSystem.ViewModels
             }
             else
             {
-                //foreach (var item in Details)
-                //{
-                //    var isExist = Order.Products.Any(x => x.ProductId == item.ProductId);
-                //    if (!isExist)
-                //    {
-                //        OrderDetail detail = new OrderDetail
-                //        {
-                //            ProductId = item.ProductId,
-                //            Quantity = item.Quantity,
-                //        };
-                //        Order.Products.Add(detail);
-                //    }
-                //}
-
-                //ctx.SaveChanges();
+              
             }
 
             CurrentWindows.DialogResult = true;
 
             //OrdersWindow mywindow = new OrdersWindow();
             //mywindow.Show();
+
         }
 
         private void Add()

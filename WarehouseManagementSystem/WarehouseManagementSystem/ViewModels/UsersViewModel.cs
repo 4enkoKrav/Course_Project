@@ -30,8 +30,9 @@ namespace WarehouseManagementSystem.Views
             {
                 _userList = value;
                 OnPropertyChanged("UserList");
-            }
+            } 
         }
+        
 
         private User _selectedUser;
         public User SelectedUser
@@ -57,7 +58,7 @@ namespace WarehouseManagementSystem.Views
             this.AddCommand = new RelayCommand(param => this.Add(), param => true);
             this.SaveCommand = new RelayCommand(param => this.Save(), param => true);
             this.DeleteCommand = new RelayCommand(param => this.Delete(), param => true);
-            this.SearchCommand = new RelayCommand(param => this.Search(), param => true);
+            //this.SearchCommand = new RelayCommand(param => this.Search(), param => true);
            
 
             
@@ -68,11 +69,21 @@ namespace WarehouseManagementSystem.Views
         }
 
      
+        /*
         private void Search()
         {
             WarehouseDbContext ctx = new WarehouseDbContext();
-            UserList = new List<User>(ctx.Users.ToList().Where(u => u.Name.Contains(SearchTerm)));
+            if (SearchTerm != null)
+            {
+                UserList = new List<User>(ctx.Users.ToList().Where(u => u.Name.Contains(SearchTerm)));
+            }
+
+   
+
         }
+        */
+
+
 
         private void Delete()
         {

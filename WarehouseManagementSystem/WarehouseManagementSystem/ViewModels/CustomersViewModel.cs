@@ -78,9 +78,12 @@ namespace WarehouseManagementSystem.ViewModels
         {
             
             WarehouseDbContext ctx = new WarehouseDbContext();
-            CustomerList = new List<Customer>(ctx.Customers.ToList().Where(u => u.Name.Contains(SearchTerm)));
-            
+            if (SearchTerm != null)
+            {
+                CustomerList = new List<Customer>(ctx.Customers.ToList().Where(u => u.Name.Contains(SearchTerm)));
             }
+
+        }
         
         private void Delete()
         {

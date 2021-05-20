@@ -64,13 +64,15 @@
                         <Image Source="/Pictures/1adduser.png" ToolTip="Add user" Height="30" Width="30"/>
                     </StackPanel>
                 </Button>
+                <!--
                 <Label Content="Search:" Foreground="Black"  FontSize="15" VerticalAlignment="Top" Margin="276,10,69,0" Height="30"/>
-                <TextBox  Text="{Binding SearchTerm}" Background="#e5e9e9" HorizontalAlignment="Left" Height="30" Margin="352,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="193" Grid.ColumnSpan="2" RenderTransformOrigin="0.586,0"/>
+                <TextBox  Text="{Binding SearchTerm}" Background="#e5e9e9" HorizontalAlignment="Left" Height="30" Margin="352,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="193" Grid.ColumnSpan="2" RenderTransformOrigin="0.586,0"/>            
                 <Button Background="Transparent" Template="{StaticResource RoundedButtonControlTemplate}" Command="{Binding SearchCommand}" FontSize="15"  HorizontalAlignment="Right" Margin="0,10,0,0" VerticalAlignment="Top" Width="53" Height="32" RenderTransformOrigin="2.047,0.484" Grid.Column="1">
-                    <StackPanel>
+                <StackPanel>
                         <Image Source="/Pictures/search.png" Height="30" Width="24" RenderTransformOrigin="1.438,0.969"/>
                     </StackPanel>
                 </Button>
+                -->
             </Grid>
 
         </DockPanel>
