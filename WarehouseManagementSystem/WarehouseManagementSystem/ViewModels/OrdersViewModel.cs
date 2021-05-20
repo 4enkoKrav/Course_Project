@@ -124,6 +124,8 @@ namespace WarehouseManagementSystem.Views
                 order = SelectedOrder;
             }
 
+            
+           
             AddProductsWindow myWindow = new AddProductsWindow(order);
 
             myWindow.Show();

@@ -10,6 +10,7 @@ namespace WarehouseManagementSystem.Helpers
 {
     public static class PasswordBoxAssistant
     {
+
         public static readonly DependencyProperty BoundPassword =
           DependencyProperty.RegisterAttached("BoundPassword", typeof(string), typeof(PasswordBoxAssistant), new PropertyMetadata(string.Empty, OnBoundPasswordChanged));
 

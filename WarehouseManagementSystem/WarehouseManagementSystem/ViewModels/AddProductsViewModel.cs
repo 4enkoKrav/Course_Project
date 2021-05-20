@@ -22,6 +22,7 @@ namespace WarehouseManagementSystem.ViewModels
         public ICommand DeleteCommand { get; set; }
 
 
+
         public Order Order { get; set; }
 
         private List<Product> _products;
@@ -34,6 +35,7 @@ namespace WarehouseManagementSystem.ViewModels
                 OnPropertyChanged("Products");
             }
         }
+
 
         private ObservableCollection<OrderDetail> _details;
         public ObservableCollection<OrderDetail> Details
@@ -93,16 +95,14 @@ namespace WarehouseManagementSystem.ViewModels
 
                 ctx.Orders.Add(Order);
                 ctx.SaveChanges();
-            }
-            else
-            {
-              
+
             }
 
-            CurrentWindows.DialogResult = true;
+            CurrentWindows.Close();
+            //CurrentWindows.DialogResult = true;
 
             //OrdersWindow mywindow = new OrdersWindow();
-            //mywindow.Show();
+            //mywindow.ShowDialog();
 
         }
 
