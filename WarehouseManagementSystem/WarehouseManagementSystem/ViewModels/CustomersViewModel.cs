@@ -90,7 +90,7 @@ namespace WarehouseManagementSystem.ViewModels
             
             if (SelectedCustomer == null || SelectedCustomer.ID == 0)
             {
-                MessageBox.Show(CurrentWindows, "Please select a user before deleting.");
+                MessageBox.Show(CurrentWindows, "Please select a client before deleting.");
                 return;
             }
 
@@ -138,7 +138,7 @@ namespace WarehouseManagementSystem.ViewModels
             {
                 if (SelectedCustomer == null)
                 {
-                    MessageBox.Show(CurrentWindows, "Please select a user before editting.");
+                    MessageBox.Show(CurrentWindows, "Please select a client before editting.");
                     return;
                 }
 
@@ -181,7 +181,8 @@ namespace WarehouseManagementSystem.ViewModels
                 CustomerList = new List<Customer>(ctx.Customers.ToList());
 
                 IsNew = false;
-                
+
+                MessageBox.Show(CurrentWindows, "Updated successfully !");
             }
                 
             

@@ -27,7 +27,5 @@ namespace WarehouseManagementSystem.Views
             //Binding view with ViewModel
             DataContext = new CustomersViewModel(this);
         }
-
- 
     }
 }

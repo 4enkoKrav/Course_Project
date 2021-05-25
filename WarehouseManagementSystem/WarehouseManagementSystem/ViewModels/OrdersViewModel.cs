@@ -104,7 +104,7 @@ namespace WarehouseManagementSystem.Views
         {
             if (SelectedCustomer == null)
             {
-                MessageBox.Show(CurrentWindows, "Please select a user before adding products.");
+                MessageBox.Show(CurrentWindows, "Please select a client before adding products.");
                 return;
             }
 
@@ -128,6 +128,13 @@ namespace WarehouseManagementSystem.Views
            
             AddProductsWindow myWindow = new AddProductsWindow(order);
 
+            /*
+            if (SelectedOrder != null)
+            {
+                MessageBox.Show(CurrentWindows, "Updated successfully !");
+            }
+            */
+
             myWindow.Show();
 
             /*
@@ -142,14 +149,15 @@ namespace WarehouseManagementSystem.Views
        
         private void Delete()
         {
-            if (SelectedOrder == null)
+            if (SelectedOrder == null || SelectedOrder.ID == 0)
             {
                 MessageBox.Show(CurrentWindows, "Please select on order before deleting!");
                 return;
             }
 
-            MessageBoxResult result = MessageBox.Show(CurrentWindows, "Are you sure you want to delete:\n"
-               , "Confirm delete", MessageBoxButton.OKCancel, MessageBoxImage.Warning);
+            MessageBoxResult result = MessageBox.Show(CurrentWindows, "Are you sure you want to delete order from:\n" +
+            SelectedOrder.Date, "Confirm delete", MessageBoxButton.OKCancel, MessageBoxImage.Warning);
+          
 
             if (result == MessageBoxResult.OK)
             {

@@ -87,7 +87,7 @@ namespace WarehouseManagementSystem.Views
 
         private void Delete()
         {
-            if (SelectedUser == null)
+            if (SelectedUser == null || SelectedUser.ID == 0)
             {
                 MessageBox.Show(CurrentWindows, "Please select a user before deleting.");
                 return;
@@ -156,7 +156,7 @@ namespace WarehouseManagementSystem.Views
 
                 ctx.SaveChanges();
 
-                MessageBox.Show(CurrentWindows, "Updated successfully !");
+                MessageBox.Show(CurrentWindows, "Edited successfully !");
             }
             else
             {
@@ -183,8 +183,22 @@ namespace WarehouseManagementSystem.Views
 
                 UserList = new List<User>(ctx.Users.ToList());
 
-                IsNew = false;     
-             
+                IsNew = false;
+
+                MessageBox.Show(CurrentWindows, "Updated successfully !");
+
+
+                /*
+                if (.Email != null && Password != null)
+                {
+                    MessageBox.Show(CurrentWindows, "Updated successfully !");
+                }
+                else
+                {
+                    MessageBox.Show(CurrentWindows, "Enter the Email and Password !");
+                }
+                */
+
             }
 
         }

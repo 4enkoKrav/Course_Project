@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WarehouseManagementSystem.Views"
       mc:Ignorable="d"
-      Title="Add Products" Height="421" Width="504.5" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" ShowInTaskbar="False">
+      Title="Добавить товар" Height="421" Width="600" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" ShowInTaskbar="False">
 
     <Window.Resources>
         <ControlTemplate x:Key="RoundedComboBoxControlTemplate" TargetType="{x:Type ComboBox }"  >
@@ -20,16 +20,16 @@
 
     <Border Background="#8a8e8e"  CornerRadius="15">
         <DockPanel Background="#8a8e8e">
-            <Grid DockPanel.Dock="Left" Width="208" Background="#8a8e8e"  >
-                <Label Content="Add Product"      Foreground="White" HorizontalAlignment="Right"  VerticalAlignment="Top"  HorizontalContentAlignment="Center" Height="54" Width="208" FontSize="30" FontWeight="Bold"/>
-                <Label Content="Product:" Foreground="White" FontSize="15"  HorizontalAlignment="Left" Margin="10,71,0,0" VerticalAlignment="Top" Width="99" Height="30" RenderTransformOrigin="0.536,0.7"/>
+            <Grid DockPanel.Dock="Left" Width="250" Background="#8a8e8e"  >
+                <Label Content="Добавить товар"      Foreground="White" HorizontalAlignment="Right"  VerticalAlignment="Top"  HorizontalContentAlignment="Center" Height="54" Width="250" FontSize="30" FontWeight="Bold"/>
+                <Label Content="Товар:" Foreground="White" FontSize="15"  HorizontalAlignment="Left" Margin="10,71,0,0" VerticalAlignment="Top" Width="99" Height="30" RenderTransformOrigin="0.536,0.7"/>
                 <ComboBox ItemsSource="{Binding Products}" DisplayMemberPath="Name" SelectedItem="{Binding Detail.Product}" HorizontalAlignment="Left" Margin="10,106,0,0" VerticalAlignment="Top" Width="181" Height="27" IsReadOnly="True" />
-                <Button Command="{Binding AddCommand}" Template="{StaticResource RoundedButtonControlTemplate}" FontSize="15"  Content="Add"  Background="#6accbd"  x:Name="btnSave" HorizontalAlignment="Left" Margin="12,223,0,0" VerticalAlignment="Top" Width="179" Height="33"/>
-                <Label Content="Quantity" Foreground="White" FontSize="15"  HorizontalAlignment="Left" Margin="10,129,0,0" VerticalAlignment="Top" Width="104" Height="30"/>
+                <Button Command="{Binding AddCommand}" Template="{StaticResource RoundedButtonControlTemplate}" FontSize="15"  Content="Добавить"  Background="#6accbd"  x:Name="btnSave" HorizontalAlignment="Left" Margin="12,223,0,0" VerticalAlignment="Top" Width="179" Height="33"/>
+                <Label Content="Количество" Foreground="White" FontSize="15"  HorizontalAlignment="Left" Margin="10,129,0,0" VerticalAlignment="Top" Width="104" Height="30"/>
                 <TextBox Text="{Binding Detail.Quantity}" Height="30" Margin="10,164,17,0" TextWrapping="Wrap" VerticalAlignment="Top" RenderTransformOrigin="0.434,2.311"/>
-                <Button Command="{Binding DeleteCommand}" Template="{StaticResource RoundedButtonControlTemplate}" FontSize="15" Foreground="Red" Content="Delete"  Background="#6accbd"  x:Name="btnSave_Copy" HorizontalAlignment="Left" Margin="12,261,0,0" VerticalAlignment="Top" Width="179" Height="33"/>
-                <Button Command="{Binding DoneCommand}" Template="{StaticResource RoundedButtonControlTemplate}" FontSize="15"  Content="Done"  Background="#6accbd"  x:Name="btnSave_Copy1" HorizontalAlignment="Left" Margin="12,299,0,0" VerticalAlignment="Top" Width="179" Height="33"/>
-                <Button Command="{Binding CancelCommand}" Template="{StaticResource RoundedButtonControlTemplate}" FontSize="15"  Content="Cancel"  Background="#6accbd"  x:Name="btnSave_Copy2" HorizontalAlignment="Left" Margin="12,337,0,0" VerticalAlignment="Top" Width="179" Height="33"/>
+                <Button Command="{Binding DeleteCommand}" Template="{StaticResource RoundedButtonControlTemplate}" FontSize="15" Foreground="Red" Content="Удалить"  Background="#6accbd"  x:Name="btnSave_Copy" HorizontalAlignment="Left" Margin="12,261,0,0" VerticalAlignment="Top" Width="179" Height="33"/>
+                <Button Command="{Binding DoneCommand}" Template="{StaticResource RoundedButtonControlTemplate}" FontSize="15"  Content="Выполнить"  Background="#6accbd"  x:Name="btnSave_Copy1" HorizontalAlignment="Left" Margin="12,299,0,0" VerticalAlignment="Top" Width="179" Height="33"/>
+                <Button Command="{Binding CancelCommand}" Template="{StaticResource RoundedButtonControlTemplate}" FontSize="15"  Content="Назад"  Background="#6accbd"  x:Name="btnSave_Copy2" HorizontalAlignment="Left" Margin="12,337,0,0" VerticalAlignment="Top" Width="179" Height="33"/>
             </Grid>
 
 
@@ -38,8 +38,8 @@
                 <ListView ItemsSource="{Binding Details}" RenderTransformOrigin="0.5,0.5" SelectedItem="{Binding SelectedDetail}" >
                     <ListView.View>
                         <GridView>
-                            <GridViewColumn Header="Product" DisplayMemberBinding="{Binding Product.Name}" Width="200"/>
-                            <GridViewColumn Header="Quantity" DisplayMemberBinding="{Binding Quantity}" Width="100"/>
+                            <GridViewColumn Header="Товар" DisplayMemberBinding="{Binding Product.Name}" Width="200"/>
+                            <GridViewColumn Header="Количество" DisplayMemberBinding="{Binding Quantity}" Width="160"/>
                         </GridView>
                     </ListView.View>
                 </ListView>

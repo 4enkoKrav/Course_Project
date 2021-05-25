@@ -4,7 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d"
-        Title="WMS" Height="700" Width="1000" WindowStartupLocation="CenterScreen" ResizeMode="CanMinimize">
+        Title="СУС" Height="700" Width="1000" WindowStartupLocation="CenterScreen" ResizeMode="CanMinimize">
     <Window.Resources>
         <ControlTemplate TargetType="Button" x:Key="RoundedButtonControlTemplate">
             <Border  Background="{TemplateBinding Background}"  x:Name="Border" BorderBrush="#6accbd"  BorderThickness="{TemplateBinding BorderThickness}" CornerRadius="9" >
@@ -16,15 +16,15 @@
     <Border Background="#8a8e8e"  CornerRadius="15">
         <DockPanel Background="#8a8e8e">
             <Grid DockPanel.Dock="Left"  Width="388" Background="#8a8e8e" Margin="0,0,0,0" Height="509" VerticalAlignment="Top" >
-                <Label Content="WMS" Foreground="#6accbd" HorizontalContentAlignment="Center" FontSize="100" FontWeight="Bold" VerticalAlignment="Top" Height="120" HorizontalAlignment="Right" Width="388" Margin="0,7,0,0"/>
-                <Label Content="Warehouse Management System"  HorizontalContentAlignment="Center" FontSize="20"  Foreground="#6accbd" HorizontalAlignment="Left" Margin="0,127,0,0" VerticalAlignment="Top" Width="388" Height="44"/>
-                <Button Template="{StaticResource RoundedButtonControlTemplate}"  Command="{Binding CustomersCommand}" Content="Customers" FontSize="15" HorizontalAlignment="Left" Margin="36,195,0,0" VerticalAlignment="Top" Width="310" Height="40"/>
-                <Button Template="{StaticResource RoundedButtonControlTemplate}"  Command="{Binding ProductsCommand}" Content="Products" FontSize="15" Margin="38,243,42,0" VerticalAlignment="Top" Height="41"/>
-                <Button Template="{StaticResource RoundedButtonControlTemplate}"  Command="{Binding OrdersCommand}" Content="Orders" FontSize="15" Margin="38,294,42,0" VerticalAlignment="Top" Height="41"/>
+                <Label Content="CУС" Foreground="#6accbd" HorizontalContentAlignment="Center" FontSize="100" FontWeight="Bold" VerticalAlignment="Top" Height="120" HorizontalAlignment="Right" Width="388" Margin="0,7,0,0"/>
+                <Label Content="Система Управления Складом"  HorizontalContentAlignment="Center" FontSize="20"  Foreground="#6accbd" HorizontalAlignment="Left" Margin="0,127,0,0" VerticalAlignment="Top" Width="388" Height="44"/>
+                <Button Template="{StaticResource RoundedButtonControlTemplate}"  Command="{Binding CustomersCommand}" Content="Клиенты" FontSize="15" HorizontalAlignment="Left" Margin="36,195,0,0" VerticalAlignment="Top" Width="310" Height="40"/>
+                <Button Template="{StaticResource RoundedButtonControlTemplate}"  Command="{Binding ProductsCommand}" Content="Товары" FontSize="15" Margin="38,243,42,0" VerticalAlignment="Top" Height="41"/>
+                <Button Template="{StaticResource RoundedButtonControlTemplate}"  Command="{Binding OrdersCommand}" Content="Заказы" FontSize="15" Margin="38,294,42,0" VerticalAlignment="Top" Height="41"/>
                <!--
                 <Button Template="{StaticResource RoundedButtonControlTemplate}"  Command="{Binding UsersCommand}" Content="Users"  FontSize="15" HorizontalAlignment="Left" Margin="38,346,0,0" VerticalAlignment="Top" Width="308" Height="42"/>
                 -->
-                <Button  Command="{Binding ExitCommand}" Template="{StaticResource RoundedButtonControlTemplate}" Content="Exit"  FontSize="15" Background="#6accbd"  HorizontalAlignment="Left" Margin="38,450,0,19" Width="308" RenderTransformOrigin="0.516,0.128"/>
+                <Button  Command="{Binding ExitCommand}" Template="{StaticResource RoundedButtonControlTemplate}" Content="Выход"  FontSize="15" Background="#6accbd"  HorizontalAlignment="Left" Margin="38,450,0,19" Width="308" RenderTransformOrigin="0.516,0.128"/>
             </Grid>
 
             <Grid DockPanel.Dock="Right" Background="#dddddd">

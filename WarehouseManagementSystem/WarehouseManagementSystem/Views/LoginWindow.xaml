@@ -6,7 +6,7 @@
         xmlns:ff="clr-namespace:WarehouseManagementSystem.Helpers"
         mc:Ignorable="d"
          xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
-        Title="Login" Height="324" Width="497" ResizeMode="NoResize" WindowStartupLocation="CenterScreen"  >
+        Title="Авторизация" Height="324" Width="497" ResizeMode="NoResize" WindowStartupLocation="CenterScreen"  >
     <Window.Resources>
         <ControlTemplate TargetType="Button" x:Key="RoundedButtonControlTemplate">
             <Border  Background="{TemplateBinding Background}"  x:Name="Border" BorderBrush="#6accbd" BorderThickness="{TemplateBinding BorderThickness}" CornerRadius="6" >
@@ -19,18 +19,20 @@
     <Border Background="#8a8e8e" >
         <Grid Height="285" VerticalAlignment="Top">
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="29*"/>
-                <ColumnDefinition Width="266*"/>
+                <ColumnDefinition Width="23*"/>
+                <ColumnDefinition Width="6*"/>
+                <ColumnDefinition Width="14*"/>
+                <ColumnDefinition Width="251*"/>
                 <ColumnDefinition Width="196*"/>
             </Grid.ColumnDefinitions>
-            <Label HorizontalContentAlignment="Center" Content="Inventory  Management  System" Foreground="White"  FontSize="25" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="481" Height="56" RenderTransformOrigin="0.517,0.278" Grid.ColumnSpan="3" />
-            <Label Content="E-mail:" HorizontalAlignment="Left" Foreground="White" FontSize="15" Margin="43,71,0,0" VerticalAlignment="Top" Width="99" Grid.Column="1"/>
-            <Label Content="Password:" HorizontalAlignment="Left" Foreground="White" FontSize="15" Margin="43.2,137,0,0" VerticalAlignment="Top" Width="99" Grid.Column="1"/>
+            <Label HorizontalContentAlignment="Center" Content="Система Управления Складом" Foreground="White"  FontSize="25" HorizontalAlignment="Left" Margin="10,10,-0.6,0" VerticalAlignment="Top" Width="481" Height="56" RenderTransformOrigin="0.517,0.278" Grid.ColumnSpan="5" />
+            <Label Content="Почта:" HorizontalAlignment="Left" Foreground="White" FontSize="15" Margin="28.8,71,0,0" VerticalAlignment="Top" Width="99" Grid.Column="3"/>
+            <Label Content="Пароль:" HorizontalAlignment="Left" Foreground="White" FontSize="15" Margin="29.395,150,0,0" VerticalAlignment="Top" Width="99" Grid.Column="3"/>
 
 
-            <TextBox Text="{Binding CurrentUser.Email}" materialDesign:HintAssist.Hint="Enter email" TabIndex="1" Background="#8a8e8e" Foreground="White" BorderThickness="2.5"  Height="30" Margin="43,101,60,0" TextWrapping="Wrap" VerticalAlignment="Top" Grid.ColumnSpan="2" Grid.Column="1"/>
-            <PasswordBox Background="#8a8e8e" TabIndex="2" Foreground="White" x:Name="PasswordBox" materialDesign:HintAssist.Hint="Enter password"  ff:PasswordBoxAssistant.BindPassword="true" BorderThickness="2.5" ff:PasswordBoxAssistant.BoundPassword="{Binding Path=CurrentUser.Password, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Margin="43,180,60,75" Grid.ColumnSpan="2" Grid.Column="1"/>
-            <Button Command="{Binding LoginCommand}"   IsDefault="True" Template="{StaticResource RoundedButtonControlTemplate}" Content="Login"   FontSize="14" Foreground="#323636"   HorizontalAlignment="Left"  Background="#6accbd" Margin="34,240,0,0" VerticalAlignment="Top" Width="368" Height="31" Grid.ColumnSpan="2" Grid.Column="1" />
+            <TextBox Text="{Binding CurrentUser.Email}" materialDesign:HintAssist.Hint="Введите почту" TabIndex="1" Background="#8a8e8e" Foreground="White" BorderThickness="2.5"  Height="30" Margin="28.8,101,59.4,0" TextWrapping="Wrap" VerticalAlignment="Top" Grid.ColumnSpan="2" Grid.Column="3"/>
+            <PasswordBox Background="#8a8e8e" TabIndex="2" Foreground="White" x:Name="PasswordBox" materialDesign:HintAssist.Hint="Введите пароль"  ff:PasswordBoxAssistant.BindPassword="true" BorderThickness="2.5" ff:PasswordBoxAssistant.BoundPassword="{Binding Path=CurrentUser.Password, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Margin="28.8,180,60.4,75" Grid.ColumnSpan="2" Grid.Column="3"/>
+            <Button Command="{Binding LoginCommand}"   IsDefault="True" Template="{StaticResource RoundedButtonControlTemplate}" Content="Авторизоваться"   FontSize="14" Foreground="#323636"   HorizontalAlignment="Left"  Background="#6accbd" Margin="19.8,240,0,0" VerticalAlignment="Top" Width="368" Height="31" Grid.ColumnSpan="2" Grid.Column="3" />
             <!-- Style="{StaticResource MaterialDesignFlatButton}"-->
             <!-- Click="Button_Reg_Click"
             <Button  Command="{Binding LoginCommand}"  Style="{StaticResource MaterialDesignFlatButton}" IsDefault="True"  Content="Register" FontSize="14" Foreground="#323636"   HorizontalAlignment="Left"  Background="#6accbd" Margin="34,240,0,0" VerticalAlignment="Top" Width="368" Height="31" Grid.ColumnSpan="2" Grid.Column="1"  />
@@ -38,9 +40,9 @@
             <PasswordBox x:Name="passBox" materialDesign:HintAssist.Hint="Enter password"  TabIndex="1" Background="#8a8e8e" Foreground="White" BorderThickness="2.5"  Height="30" Margin="43.2,165,60.4,0" VerticalAlignment="Top" Grid.ColumnSpan="2" Grid.Column="1"/>
           
             <PasswordBox x:Name="passBox_2" materialDesign:HintAssist.Hint="Enter password"  TabIndex="1" Background="#8a8e8e" Foreground="White" BorderThickness="2.5"  Height="30" Margin="43.2,201,60.4,0" VerticalAlignment="Top" Grid.ColumnSpan="2" Grid.Column="1"/>
-            -->   
+            -->
         </Grid>
-            <!-- 
+        <!-- 
             
     
               -->

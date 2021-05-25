@@ -4,7 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d"
-        Title="Products" Height="700" Width="1000" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" ShowInTaskbar="False">
+        Title="Товары" Height="700" Width="1050" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" ShowInTaskbar="False">
     <Window.Resources>
         <ControlTemplate TargetType="Button" x:Key="RoundedButtonControlTemplate">
             <Border  Background="{TemplateBinding Background}"  x:Name="Border"  BorderThickness="{TemplateBinding BorderThickness}" CornerRadius="6" >
@@ -16,20 +16,20 @@
 
     <Border Background="#8a8e8e"  CornerRadius="15">
         <DockPanel Background="#8a8e8e">
-            <Grid DockPanel.Dock="Left" Width="285" Background="#8a8e8e" >
-                <Label Content="Products Managing"      Foreground="White" HorizontalAlignment="Right"  VerticalAlignment="Top"  HorizontalContentAlignment="Center" Height="54" Width="285" FontSize="30" FontWeight="Bold"/>
-                <Label Content="Name:" Foreground="White" FontSize="15"  HorizontalAlignment="Left" Margin="9,64,0,0" VerticalAlignment="Top" Width="97" Height="30"/>
-                <Label Content="Description:" Foreground="White" FontSize="15"  HorizontalAlignment="Left" Margin="9,100,0,0" VerticalAlignment="Top" Width="96" Height="30"/>
-                <Label Content="Price:" Foreground="White" FontSize="15"  HorizontalAlignment="Left" Margin="14,135,0,0" VerticalAlignment="Top" Width="91" Height="30"/>
+            <Grid DockPanel.Dock="Left" Width="330" Background="#8a8e8e" >
+                <Label Content="Управление товарами"  Foreground="White" HorizontalAlignment="Right"  VerticalAlignment="Top"  HorizontalContentAlignment="Center" Height="54" Width="334" FontSize="30" FontWeight="Bold" Margin="-3,0,-1,0"/>
+                <Label Content="Название:" Foreground="White" FontSize="15"  HorizontalAlignment="Left" Margin="9,64,0,0" VerticalAlignment="Top" Width="97" Height="30"/>
+                <Label Content="Описание:" Foreground="White" FontSize="15"  HorizontalAlignment="Left" Margin="9,100,0,0" VerticalAlignment="Top" Width="96" Height="30"/>
+                <Label Content="Цена:" Foreground="White" FontSize="15"  HorizontalAlignment="Left" Margin="14,135,0,0" VerticalAlignment="Top" Width="91" Height="30"/>
                 <TextBox  Text="{Binding SelectedProduct.Description}" TabIndex="2" HorizontalAlignment="Left" Height="30" Margin="106,100,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="168"/>
                 <TextBox  Text="{Binding SelectedProduct.Name}" TabIndex="1" Height="30" Margin="105,64,11,0" TextWrapping="Wrap" VerticalAlignment="Top"/>
                 <TextBox  Text="{Binding SelectedProduct.Price}" TabIndex="3" HorizontalAlignment="Left" Height="30" Margin="106,135,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="168"/>
-                <Button Command="{Binding DeleteCommand}" Template="{StaticResource RoundedButtonControlTemplate}" Foreground="Red" FontSize="15"  Content="Delete"   Background="#6accbd" HorizontalAlignment="Left" Margin="14,400,0,0" VerticalAlignment="Top" Width="259" Height="30"/>
-                <Button Command="{Binding SaveCommand}" Template="{StaticResource RoundedButtonControlTemplate}" FontSize="15"  Content="Save"  Background="#6accbd"  x:Name="btnSave" HorizontalAlignment="Left" Margin="14,362,0,0" VerticalAlignment="Top" Width="260" Height="32"/>
-                <Button Command="{Binding CancelCommand}" Template="{StaticResource RoundedButtonControlTemplate}" FontSize="15" Content="Cancel"  Background="#6accbd"  HorizontalAlignment="Left" Margin="13,470,0,0" VerticalAlignment="Top" Width="260" Height="30"/>
+                <Button Command="{Binding DeleteCommand}" Template="{StaticResource RoundedButtonControlTemplate}" Foreground="Red" FontSize="15"  Content="Удалить"   Background="#6accbd" HorizontalAlignment="Left" Margin="14,400,0,0" VerticalAlignment="Top" Width="259" Height="30"/>
+                <Button Command="{Binding SaveCommand}" Template="{StaticResource RoundedButtonControlTemplate}" FontSize="15"  Content="Добавить"  Background="#6accbd"  x:Name="btnSave" HorizontalAlignment="Left" Margin="14,362,0,0" VerticalAlignment="Top" Width="260" Height="32"/>
+                <Button Command="{Binding CancelCommand}" Template="{StaticResource RoundedButtonControlTemplate}" FontSize="15" Content="Назад"  Background="#6accbd"  HorizontalAlignment="Left" Margin="13,470,0,0" VerticalAlignment="Top" Width="260" Height="30"/>
                 <ComboBox ItemsSource="{Binding Categories}" TabIndex="4" DisplayMemberPath="Name" Text="{Binding SelectedCategory}" HorizontalAlignment="Left" Margin="105,170,0,0" VerticalAlignment="Top" Width="169" IsEditable="True" Height="27" />
-                <Label Content="Category:" Foreground="White" FontSize="15"  HorizontalAlignment="Left" Margin="9,165,0,0" VerticalAlignment="Top" Width="91" Height="30"/>
-                <Label Content="Image:" Foreground="White" FontSize="15"  HorizontalAlignment="Left" Margin="9,200,0,0" VerticalAlignment="Top" Width="91" Height="30"/>
+                <Label Content="Категория:" Foreground="White" FontSize="15"  HorizontalAlignment="Left" Margin="9,165,0,0" VerticalAlignment="Top" Width="91" Height="30"/>
+                <Label Content="Изображение:" Foreground="White" FontSize="15"  HorizontalAlignment="Left" Margin="1,200,0,0" VerticalAlignment="Top" Width="105" Height="30"/>
 
                 <Border BorderBrush="White" BorderThickness="1" Margin="108,202,10,312.4" RenderTransformOrigin="0.5,0.5">
                     <Border.RenderTransform>
@@ -42,7 +42,7 @@
                     </Border.RenderTransform>
                     <Image Source="{Binding SelectedProduct.Image}"   Margin="9.2,9.2,8.6,42.2"/>
                 </Border>
-                <Button Command="{Binding AddImageCommand}" Template="{StaticResource RoundedButtonControlTemplate}"   FontSize="15"  Content="Add Image"  Background="#e5e9e9"  x:Name="btnSave_Copy" HorizontalAlignment="Left" Margin="115,322,0,0" VerticalAlignment="Top" Width="148" Height="23"/>
+                <Button Command="{Binding AddImageCommand}" Template="{StaticResource RoundedButtonControlTemplate}"   FontSize="15"  Content="Добавить фото"  Background="#e5e9e9"  x:Name="btnSave_Copy" HorizontalAlignment="Left" Margin="115,322,0,0" VerticalAlignment="Top" Width="148" Height="23"/>
 
             </Grid>
 
@@ -60,11 +60,11 @@
                 <ListView x:Name="listView" ItemsSource="{Binding ProductList}" Margin="0,45,0,0" Grid.RowSpan="4" Grid.ColumnSpan="2" SelectedItem="{Binding SelectedProduct}" >
                     <ListView.View>
                         <GridView>
-                            <GridViewColumn Header="ID" DisplayMemberBinding="{Binding ID}" Width="30"/>
-                            <GridViewColumn Header="Name" DisplayMemberBinding="{Binding Name}" Width="150"/>
-                            <GridViewColumn Header="Description" DisplayMemberBinding="{Binding Description}" Width="180"/>
-                            <GridViewColumn Header="Category" DisplayMemberBinding="{Binding Category.Name}" Width="130"/>
-                            <GridViewColumn Header="Price" DisplayMemberBinding="{Binding Price}" Width="100"/>
+                            <GridViewColumn Header="ID" DisplayMemberBinding="{Binding ID}" Width="80"/>
+                            <GridViewColumn Header="Название" DisplayMemberBinding="{Binding Name}" Width="150"/>
+                            <GridViewColumn Header="Описание" DisplayMemberBinding="{Binding Description}" Width="230"/>
+                            <GridViewColumn Header="Категория" DisplayMemberBinding="{Binding Category.Name}" Width="130"/>
+                            <GridViewColumn Header="Цена" DisplayMemberBinding="{Binding Price}" Width="100"/>
                         </GridView>
                     </ListView.View>
                 </ListView>
@@ -73,7 +73,7 @@
                         <Image Source="/Pictures/1addproduct.png" ToolTip="Add Product" Height="32" Width="28"/>
                     </StackPanel>
                 </Button>
-                <Label Content="Search:" Foreground="Black"  FontSize="15" VerticalAlignment="Top" Margin="276,10,69,0" Height="30"/>
+                <Label Content="Поиск:" Foreground="Black"  FontSize="15" VerticalAlignment="Top" Margin="276,10,69,0" Height="30"/>
                 <TextBox  Text="{Binding SearchTerm}" Background="#e5e9e9" HorizontalAlignment="Left" Height="30" Margin="352,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="193" Grid.ColumnSpan="2" RenderTransformOrigin="0.586,0"/>
                 <Button Background="Transparent" Template="{StaticResource RoundedButtonControlTemplate}" Command="{Binding SearchCommand}" FontSize="15"  HorizontalAlignment="Right" Margin="0,10,0,0" VerticalAlignment="Top" Width="53" Height="32" RenderTransformOrigin="2.047,0.484" Grid.Column="1">
                     <StackPanel>

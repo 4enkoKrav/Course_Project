@@ -132,7 +132,7 @@ namespace WarehouseManagementSystem.ViewModels
         {
             if (SelectedDetail == null)
             {
-                MessageBox.Show(CurrentWindows, "Please select a user before deleting.");
+                MessageBox.Show(CurrentWindows, "Please select product before deleting.");
                 return;
             }
 

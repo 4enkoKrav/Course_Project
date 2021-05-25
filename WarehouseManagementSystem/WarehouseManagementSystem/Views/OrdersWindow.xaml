@@ -4,7 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
       mc:Ignorable="d"
-      Title="Orders" Height="700" Width="1000" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" ShowInTaskbar="False">
+      Title="Заказы" Height="700" Width="1000" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" ShowInTaskbar="False">
 
     <Window.Resources>
         <ControlTemplate x:Key="RoundedComboBoxControlTemplate" TargetType="{x:Type ComboBox }"  >
@@ -20,18 +20,18 @@
     <Border Background="#8a8e8e"  CornerRadius="15">
         <DockPanel Background="#8a8e8e">
             <Grid DockPanel.Dock="Left" Width="318" Background="#8a8e8e"  >
-                <Label Content="Orders Managing"      Foreground="White" HorizontalAlignment="Right"  VerticalAlignment="Top"  HorizontalContentAlignment="Center" Height="54" Width="316" FontSize="30" FontWeight="Bold"/>
-                <Label Content="Date:" Foreground="White" FontSize="15"  HorizontalAlignment="Right" Margin="0,69,206,0" VerticalAlignment="Top" Width="110" Height="30"/>
-                <Label Content="Customer:" Foreground="White" FontSize="15"  HorizontalAlignment="Left" Margin="2,139,0,0" VerticalAlignment="Top" Width="99" Height="30" RenderTransformOrigin="0.536,0.7"/>
-                <Label Content="Order Type:" Foreground="White" FontSize="15"  HorizontalAlignment="Left" Margin="0,104,0,0" VerticalAlignment="Top" Width="100" Height="30"/>
+                <Label Content="Управление заказами"      Foreground="White" HorizontalAlignment="Right"  VerticalAlignment="Top"  HorizontalContentAlignment="Center" Height="54" Width="348" FontSize="30" FontWeight="Bold" Margin="0,0,-32,0"/>
+                <Label Content="Дата:" Foreground="White" FontSize="15"  HorizontalAlignment="Right" Margin="0,69,206,0" VerticalAlignment="Top" Width="110" Height="30"/>
+                <Label Content="Клиент:" Foreground="White" FontSize="15"  HorizontalAlignment="Left" Margin="2,139,0,0" VerticalAlignment="Top" Width="99" Height="30" RenderTransformOrigin="0.536,0.7"/>
+                <Label Content="Тип заказа:" Foreground="White" FontSize="15"  HorizontalAlignment="Left" Margin="0,104,0,0" VerticalAlignment="Top" Width="100" Height="30"/>
                 <ComboBox ItemsSource="{Binding Customers}" DisplayMemberPath="Name"   SelectedItem="{Binding SelectedCustomer}" HorizontalAlignment="Left" Margin="105,142,0,0" VerticalAlignment="Top" Width="195" Height="27" IsReadOnly="True" />
                 <DatePicker  SelectedDate="{Binding SelectedOrder.Date}" HorizontalAlignment="Left" Margin="105,69,0,0" VerticalAlignment="Top" Width="203" Height="30"/>
-                <Button Command="{Binding DeleteCommand}" Template="{StaticResource RoundedButtonControlTemplate}" Foreground="Red" FontSize="15"  Content="Delete"   Background="#6accbd" HorizontalAlignment="Left" Margin="27,303,0,0" VerticalAlignment="Top" Width="260" Height="30"/>
-                <Button Command="{Binding AddProductCommand}" Template="{StaticResource RoundedButtonControlTemplate}" FontSize="15"  Content="Add Product"  Background="#6accbd"  x:Name="btnSave" HorizontalAlignment="Left" Margin="27,266,0,0" VerticalAlignment="Top" Width="260" Height="32"/>
-                <Button Command="{Binding CancelCommand}" Template="{StaticResource RoundedButtonControlTemplate}" FontSize="15" Content="Cancel"  Background="#6accbd"  HorizontalAlignment="Left" Margin="27,338,0,0" VerticalAlignment="Top" Width="260" Height="30"/>
+                <Button Command="{Binding DeleteCommand}" Template="{StaticResource RoundedButtonControlTemplate}" Foreground="Red" FontSize="15"  Content="Удалить"   Background="#6accbd" HorizontalAlignment="Left" Margin="27,303,0,0" VerticalAlignment="Top" Width="260" Height="30"/>
+                <Button Command="{Binding AddProductCommand}" Template="{StaticResource RoundedButtonControlTemplate}" FontSize="15"  Content="Добавить товар"  Background="#6accbd"  x:Name="btnSave" HorizontalAlignment="Left" Margin="27,266,0,0" VerticalAlignment="Top" Width="260" Height="32"/>
+                <Button Command="{Binding CancelCommand}" Template="{StaticResource RoundedButtonControlTemplate}" FontSize="15" Content="Назад"  Background="#6accbd"  HorizontalAlignment="Left" Margin="27,338,0,0" VerticalAlignment="Top" Width="260" Height="30"/>
                 <ComboBox Text="{Binding SelectedOrder.OrderType}" HorizontalAlignment="Left" Margin="105,104,0,0" VerticalAlignment="Top" Width="195" Height="27" IsReadOnly="True" >
-                    <ComboBoxItem Content="Out" />
-                    <ComboBoxItem Content="In" />
+                    <ComboBoxItem Content="На выход" />
+                    <ComboBoxItem Content="На вход" />
                 </ComboBox>
             </Grid>
 
@@ -42,8 +42,8 @@
                     <ListView.View>
                         <GridView>
                             <GridViewColumn Header="ID" DisplayMemberBinding="{Binding ID}" Width="90"/>
-                            <GridViewColumn Header="Date" DisplayMemberBinding="{Binding Date}" Width="150"/>
-                            <GridViewColumn Header="Customer" DisplayMemberBinding="{Binding Customer.Name}" Width="220"/>
+                            <GridViewColumn Header="Дата" DisplayMemberBinding="{Binding Date}" Width="150"/>
+                            <GridViewColumn Header="Клиент" DisplayMemberBinding="{Binding Customer.Name}" Width="220"/>
                         </GridView>
                     </ListView.View>
                 </ListView>

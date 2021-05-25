@@ -4,7 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d"
-        Title="Customers" Height="700" Width="1200" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" ShowInTaskbar="False">
+        Title="Клиенты" Height="700" Width="1300" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" ShowInTaskbar="False">
     <Window.Resources>
         <ControlTemplate TargetType="Button" x:Key="RoundedButtonControlTemplate">
             <Border  Background="{TemplateBinding Background}"  x:Name="Border"  BorderThickness="{TemplateBinding BorderThickness}" CornerRadius="6" >
@@ -16,23 +16,23 @@
 
     <Border Background="#8a8e8e"  CornerRadius="15">
         <DockPanel Background="#8a8e8e">
-            <Grid DockPanel.Dock="Left" Width="303" Background="#8a8e8e" >
-                <Label Content="Customer Managing" Foreground="White" HorizontalAlignment="Right"  VerticalAlignment="Top"  HorizontalContentAlignment="Center" Height="54" Width="303" FontSize="30" FontWeight="Bold"/>
-                <Label Content="Name:" Foreground="White" FontSize="15"  HorizontalAlignment="Left" Margin="9,64,0,0" VerticalAlignment="Top" Width="97" Height="30"/>
-                <Label Content="Company:" Foreground="White" FontSize="15"  HorizontalAlignment="Left" Margin="8,101,0,0" VerticalAlignment="Top" Width="97" Height="30"/>
-                <Label Content="Address:" Foreground="White" FontSize="15"  HorizontalAlignment="Left" Margin="13,137,0,0" VerticalAlignment="Top" Width="110" Height="30"/>
-                <Label Content="Telephone:" Foreground="White" FontSize="15"  HorizontalAlignment="Left" Margin="13,171,0,0" VerticalAlignment="Top" Width="91" Height="30"/>
-                <Label Content="City:" Foreground="White" FontSize="15"  HorizontalAlignment="Left" Margin="13,207,0,0" VerticalAlignment="Top" Width="91" Height="30"/>
-                <Label Content="Email:" Foreground="White" FontSize="15"  HorizontalAlignment="Left" Margin="13,237,0,0" VerticalAlignment="Top" Width="91" Height="30"/>
+            <Grid DockPanel.Dock="Left" Width="348" Background="#8a8e8e" >
+                <Label Content="Управление клиентами" Foreground="White" HorizontalAlignment="Right"  VerticalAlignment="Top"  HorizontalContentAlignment="Center" Height="54" Width="353" FontSize="30" FontWeight="Bold" Margin="-2,0,-3,0"/>
+                <Label Content="Имя:" Foreground="White" FontSize="15"  HorizontalAlignment="Left" Margin="9,64,0,0" VerticalAlignment="Top" Width="97" Height="30"/>
+                <Label Content="Компания:" Foreground="White" FontSize="15"  HorizontalAlignment="Left" Margin="10,101,0,0" VerticalAlignment="Top" Width="97" Height="30"/>
+                <Label Content="Адрес:" Foreground="White" FontSize="15"  HorizontalAlignment="Left" Margin="13,137,0,0" VerticalAlignment="Top" Width="110" Height="30"/>
+                <Label Content="Телефон:" Foreground="White" FontSize="15"  HorizontalAlignment="Left" Margin="13,171,0,0" VerticalAlignment="Top" Width="91" Height="30"/>
+                <Label Content="Город:" Foreground="White" FontSize="15"  HorizontalAlignment="Left" Margin="13,207,0,0" VerticalAlignment="Top" Width="91" Height="30"/>
+                <Label Content="Почта:" Foreground="White" FontSize="15"  HorizontalAlignment="Left" Margin="13,237,0,0" VerticalAlignment="Top" Width="91" Height="30"/>
                 <TextBox  Text="{Binding SelectedCustomer.Name}" Height="30" Margin="105,64,0,0" TextWrapping="Wrap" VerticalAlignment="Top" HorizontalAlignment="Left" Width="168"/>
-                <TextBox  Text="{Binding SelectedCustomer.CompanyName}" Height="30" Margin="105,101,30,0" TextWrapping="Wrap" VerticalAlignment="Top"/>
+                <TextBox  Text="{Binding SelectedCustomer.CompanyName}" Height="30" Margin="105,101,74,0" TextWrapping="Wrap" VerticalAlignment="Top"/>
                 <TextBox  Text="{Binding SelectedCustomer.Address}" HorizontalAlignment="Left" Height="30" Margin="105,137,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="168"/>
                 <TextBox  Text="{Binding SelectedCustomer.Telephone}" HorizontalAlignment="Left" Height="30" Margin="105,171,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="168"/>
                 <TextBox  Text="{Binding SelectedCustomer.City}" HorizontalAlignment="Left" Height="30" Margin="105,207,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="168"/>
                 <TextBox  Text="{Binding SelectedCustomer.Email}" HorizontalAlignment="Left" Height="30" Margin="104,241,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="168"/>
-                <Button Command="{Binding SaveCommand}" Template="{StaticResource RoundedButtonControlTemplate}" FontSize="15"  Content="Save"  Background="#6accbd"  x:Name="btnSave" HorizontalAlignment="Left" Margin="14,324,0,0" VerticalAlignment="Top" Width="260" Height="32"/>
-                <Button Command="{Binding DeleteCommand}" Template="{StaticResource RoundedButtonControlTemplate}" Foreground="Red" FontSize="15"  Content="Delete"   Background="#6accbd" HorizontalAlignment="Left" Margin="14,362,0,0" VerticalAlignment="Top" Width="259" Height="30"/>
-                <Button Command="{Binding CancelCommand}" Template="{StaticResource RoundedButtonControlTemplate}" FontSize="15" Content="Cancel"  Background="#6accbd"  HorizontalAlignment="Left" Margin="13,432,0,0" VerticalAlignment="Top" Width="260" Height="30"/>
+                <Button Command="{Binding SaveCommand}" Template="{StaticResource RoundedButtonControlTemplate}" FontSize="15"  Content="Добавить"  Background="#6accbd"  x:Name="btnSave" HorizontalAlignment="Left" Margin="14,324,0,0" VerticalAlignment="Top" Width="260" Height="32"/>
+                <Button Command="{Binding DeleteCommand}" Template="{StaticResource RoundedButtonControlTemplate}" Foreground="Red" FontSize="15"  Content="Удалить"   Background="#6accbd" HorizontalAlignment="Left" Margin="14,362,0,0" VerticalAlignment="Top" Width="259" Height="30"/>
+                <Button Command="{Binding CancelCommand}" Template="{StaticResource RoundedButtonControlTemplate}" FontSize="15" Content="Назад"  Background="#6accbd"  HorizontalAlignment="Left" Margin="13,432,0,0" VerticalAlignment="Top" Width="260" Height="30"/>
             </Grid>
 
             <Grid DockPanel.Dock="Right" Background="#6accbd">
@@ -50,12 +50,12 @@
                     <ListView.View>
                         <GridView>
                             <GridViewColumn Header="ID" DisplayMemberBinding="{Binding ID}" Width="80"/>
-                            <GridViewColumn Header="Name" DisplayMemberBinding="{Binding Name}" Width="120"/>
-                            <GridViewColumn Header="Company" DisplayMemberBinding="{Binding CompanyName}" Width="120"/>
-                            <GridViewColumn Header="Address" DisplayMemberBinding="{Binding Address}" Width="120"/>
-                            <GridViewColumn Header="City" DisplayMemberBinding="{Binding City}" Width="120" />
-                            <GridViewColumn Header="Telephone" DisplayMemberBinding="{Binding Telephone}" Width="150"/>
-                            <GridViewColumn Header="E-mail" DisplayMemberBinding="{Binding Email}" Width="150"/>
+                            <GridViewColumn Header="Имя" DisplayMemberBinding="{Binding Name}" Width="120"/>
+                            <GridViewColumn Header="Компания" DisplayMemberBinding="{Binding CompanyName}" Width="125"/>
+                            <GridViewColumn Header="Адрес" DisplayMemberBinding="{Binding Address}" Width="120"/>
+                            <GridViewColumn Header="Город" DisplayMemberBinding="{Binding City}" Width="120" />
+                            <GridViewColumn Header="Телефон" DisplayMemberBinding="{Binding Telephone}" Width="150"/>
+                            <GridViewColumn Header="Почта" DisplayMemberBinding="{Binding Email}" Width="210"/>
                         </GridView>
                     </ListView.View>
                 </ListView>
@@ -65,7 +65,7 @@
                         <Image Source="/Pictures/1adduser.png" ToolTip="Add customer" Height="31" Width="31"/>
                     </StackPanel>
                 </Button>
-                <Label Content="Search:" Foreground="Black"  FontSize="15" VerticalAlignment="Top" Margin="276,10,69,0" Height="30"/>
+                <Label Content="Поиск:" Foreground="Black"  FontSize="15" VerticalAlignment="Top" Margin="276,10,69,0" Height="30"/>
                 <TextBox  Text="{Binding SearchTerm}" Background="#e5e9e9" HorizontalAlignment="Left" Height="30" Margin="352,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="193" Grid.ColumnSpan="2" RenderTransformOrigin="0.586,0"/>
                 <Button Background="Transparent" Template="{StaticResource RoundedButtonControlTemplate}" Command="{Binding SearchCommand}" FontSize="15"  HorizontalAlignment="Right" Margin="0,10,0,0" VerticalAlignment="Top" Width="53" Height="32" RenderTransformOrigin="2.047,0.484" Grid.Column="1">
                     <StackPanel>
