@@ -8,6 +8,8 @@ Warehouse Management System
 4. Дизайн окна товаров(ProductsWindow)
 5. Дизайн окна оформления товаров(OrdersWindow)
 6. Дизайн окна пользователей(UsersWindow)
+6. Дизайн окна добавления товаров на заказ(AddProductWindow)
+
 
 7. ViewModel и Model главного окна(создание кода) (HomeViewModel)
 8. ViewModel и Model окна клиентов(создание кода) (CustomersViewModel)
@@ -15,8 +17,15 @@ Warehouse Management System
 10. ViewModel и Model окна оформления товаров(создание кода) (OrdersViewModel)
 11. ViewModel и Model окна клиентов(создание кода) (UsersViewModel)
 
+11. ViewModel и Model окна добавления товаров на заказ(создание кода) (AddProductViewModel)
 
 11. Дизайн окна входа в систему(LoginWindow) +
 
-12. ViewModel окна входа в систему(LoginWindowViewModel)  +- 
+12. ViewModel окна входа в систему(LoginWindowViewModel)  +
+
+13. Обработка исключений +
+
+14. Тестирование приложения +
+
+15. Пояснительная записка +-
 
