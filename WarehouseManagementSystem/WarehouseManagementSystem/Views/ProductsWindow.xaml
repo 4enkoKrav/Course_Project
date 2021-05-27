@@ -4,7 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d"
-        Title="Товары" Height="700" Width="1050" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" ShowInTaskbar="False">
+        Title="Товары" Height="700" Width="1200" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" ShowInTaskbar="False">
     <Window.Resources>
         <ControlTemplate TargetType="Button" x:Key="RoundedButtonControlTemplate">
             <Border  Background="{TemplateBinding Background}"  x:Name="Border"  BorderThickness="{TemplateBinding BorderThickness}" CornerRadius="6" >
@@ -27,7 +27,7 @@
                 <Button Command="{Binding DeleteCommand}" Template="{StaticResource RoundedButtonControlTemplate}" Foreground="Red" FontSize="15"  Content="Удалить"   Background="#6accbd" HorizontalAlignment="Left" Margin="14,400,0,0" VerticalAlignment="Top" Width="259" Height="30"/>
                 <Button Command="{Binding SaveCommand}" Template="{StaticResource RoundedButtonControlTemplate}" FontSize="15"  Content="Добавить"  Background="#6accbd"  x:Name="btnSave" HorizontalAlignment="Left" Margin="14,362,0,0" VerticalAlignment="Top" Width="260" Height="32"/>
                 <Button Command="{Binding CancelCommand}" Template="{StaticResource RoundedButtonControlTemplate}" FontSize="15" Content="Назад"  Background="#6accbd"  HorizontalAlignment="Left" Margin="13,470,0,0" VerticalAlignment="Top" Width="260" Height="30"/>
-                <ComboBox ItemsSource="{Binding Categories}" TabIndex="4" DisplayMemberPath="Name" Text="{Binding SelectedCategory}" HorizontalAlignment="Left" Margin="105,170,0,0" VerticalAlignment="Top" Width="169" IsEditable="True" Height="27" />
+                <ComboBox ItemsSource="{Binding Categories}" TabIndex="4" DisplayMemberPath="Name" Text="{Binding SelectedCategory}" HorizontalAlignment="Left" Margin="105,170,0,0" VerticalAlignment="Top" Width="169" IsEditable="True" Height="27"/>
                 <Label Content="Категория:" Foreground="White" FontSize="15"  HorizontalAlignment="Left" Margin="9,165,0,0" VerticalAlignment="Top" Width="91" Height="30"/>
                 <Label Content="Изображение:" Foreground="White" FontSize="15"  HorizontalAlignment="Left" Margin="1,200,0,0" VerticalAlignment="Top" Width="105" Height="30"/>
 
@@ -63,7 +63,7 @@
                             <GridViewColumn Header="ID" DisplayMemberBinding="{Binding ID}" Width="80"/>
                             <GridViewColumn Header="Название" DisplayMemberBinding="{Binding Name}" Width="150"/>
                             <GridViewColumn Header="Описание" DisplayMemberBinding="{Binding Description}" Width="230"/>
-                            <GridViewColumn Header="Категория" DisplayMemberBinding="{Binding Category.Name}" Width="130"/>
+                            <GridViewColumn Header="Категория" DisplayMemberBinding="{Binding Category.Name}" Width="200"/>
                             <GridViewColumn Header="Цена" DisplayMemberBinding="{Binding Price}" Width="100"/>
                         </GridView>
                     </ListView.View>

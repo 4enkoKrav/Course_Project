@@ -28,5 +28,7 @@ namespace WarehouseManagementSystem.Views
             DataContext = new ProductsViewModel(this);
 
         }
+
+  
     }
 }
